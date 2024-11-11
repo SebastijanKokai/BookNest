@@ -13,5 +13,5 @@ class BookDto with _$BookDto {
   }) = _BookDto;
 
   factory BookDto.fromJson(Map<String, dynamic> json) =>
-      _$BookEntityFromJson(json);
+      _$BookDtoFromJson(json);
 }
