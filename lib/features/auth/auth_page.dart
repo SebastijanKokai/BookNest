@@ -70,7 +70,10 @@ class _AuthFormState extends State<_AuthForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        _LoginTextField(label: 'Username', controller: userNameController),
+        _LoginTextField(
+          label: 'Username',
+          controller: userNameController,
+        ),
         const Gap(D.dp8),
         _LoginTextField(
           label: 'Password',
