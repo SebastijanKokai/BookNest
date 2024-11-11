@@ -1,4 +1,5 @@
 import 'package:book_nest/core/router/routes.dart';
+import 'package:book_nest/core/utils/assets.dart';
 import 'package:book_nest/core/utils/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -11,26 +12,30 @@ class AuthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
+        body: Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: D.dp32),
             child: Column(
-          children: [
-            _Header(),
-            _AuthForm(),
-          ],
-        )),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _Logo(),
+                _AuthForm(),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
 }
 
-class _Header extends StatelessWidget {
+class _Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blueGrey,
-      height: 50,
-      width: double.infinity,
-      child: const Icon(Icons.book),
+    return const SizedBox(
+      height: 200,
+      width: 200,
+      child: Image(image: AssetImage(Assets.bookNestLogo)),
     );
   }
 }
@@ -65,32 +70,35 @@ class _AuthFormState extends State<_AuthForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(D.dp32),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _LoginTextField('Username', userNameController),
-            const Gap(D.dp8),
-            _LoginTextField('Password', passwordController),
-            const Gap(D.dp16),
-            ElevatedButton(
-              onPressed: _onLogin,
-              child: const Text('Login'),
-            )
-          ],
+    return Column(
+      children: [
+        _LoginTextField(label: 'Username', controller: userNameController),
+        const Gap(D.dp8),
+        _LoginTextField(
+          label: 'Password',
+          controller: passwordController,
+          isPassword: true,
         ),
-      ),
+        const Gap(D.dp16),
+        ElevatedButton(
+          onPressed: _onLogin,
+          child: const Text('Login'),
+        )
+      ],
     );
   }
 }
 
 class _LoginTextField extends StatelessWidget {
-  const _LoginTextField(this.label, this.controller);
+  const _LoginTextField({
+    required this.label,
+    required this.controller,
+    this.isPassword = false,
+  });
 
   final String label;
   final TextEditingController controller;
+  final bool isPassword;
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +108,7 @@ class _LoginTextField extends StatelessWidget {
         Text(label),
         TextField(
           controller: controller,
+          obscureText: isPassword,
         ),
       ],
     );
