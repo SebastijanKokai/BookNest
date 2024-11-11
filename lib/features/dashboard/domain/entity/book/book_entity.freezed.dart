@@ -20,6 +20,7 @@ BookEntity _$BookEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BookEntity {
+  String? get isbn => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   AuthorEntity get author => throw _privateConstructorUsedError;
   DateTime? get dateReleased => throw _privateConstructorUsedError;
@@ -40,7 +41,11 @@ abstract class $BookEntityCopyWith<$Res> {
           BookEntity value, $Res Function(BookEntity) then) =
       _$BookEntityCopyWithImpl<$Res, BookEntity>;
   @useResult
-  $Res call({String title, AuthorEntity author, DateTime? dateReleased});
+  $Res call(
+      {String? isbn,
+      String title,
+      AuthorEntity author,
+      DateTime? dateReleased});
 
   $AuthorEntityCopyWith<$Res> get author;
 }
@@ -60,11 +65,16 @@ class _$BookEntityCopyWithImpl<$Res, $Val extends BookEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isbn = freezed,
     Object? title = null,
     Object? author = null,
     Object? dateReleased = freezed,
   }) {
     return _then(_value.copyWith(
+      isbn: freezed == isbn
+          ? _value.isbn
+          : isbn // ignore: cast_nullable_to_non_nullable
+              as String?,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -99,7 +109,11 @@ abstract class _$$BookEntityImplCopyWith<$Res>
       __$$BookEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, AuthorEntity author, DateTime? dateReleased});
+  $Res call(
+      {String? isbn,
+      String title,
+      AuthorEntity author,
+      DateTime? dateReleased});
 
   @override
   $AuthorEntityCopyWith<$Res> get author;
@@ -118,11 +132,16 @@ class __$$BookEntityImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isbn = freezed,
     Object? title = null,
     Object? author = null,
     Object? dateReleased = freezed,
   }) {
     return _then(_$BookEntityImpl(
+      isbn: freezed == isbn
+          ? _value.isbn
+          : isbn // ignore: cast_nullable_to_non_nullable
+              as String?,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -143,11 +162,16 @@ class __$$BookEntityImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BookEntityImpl implements _BookEntity {
   const _$BookEntityImpl(
-      {this.title = '', this.author = const AuthorEntity(), this.dateReleased});
+      {this.isbn,
+      this.title = '',
+      this.author = const AuthorEntity(),
+      this.dateReleased});
 
   factory _$BookEntityImpl.fromJson(Map<String, dynamic> json) =>
       _$$BookEntityImplFromJson(json);
 
+  @override
+  final String? isbn;
   @override
   @JsonKey()
   final String title;
@@ -159,7 +183,7 @@ class _$BookEntityImpl implements _BookEntity {
 
   @override
   String toString() {
-    return 'BookEntity(title: $title, author: $author, dateReleased: $dateReleased)';
+    return 'BookEntity(isbn: $isbn, title: $title, author: $author, dateReleased: $dateReleased)';
   }
 
   @override
@@ -167,6 +191,7 @@ class _$BookEntityImpl implements _BookEntity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BookEntityImpl &&
+            (identical(other.isbn, isbn) || other.isbn == isbn) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.dateReleased, dateReleased) ||
@@ -175,7 +200,8 @@ class _$BookEntityImpl implements _BookEntity {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, title, author, dateReleased);
+  int get hashCode =>
+      Object.hash(runtimeType, isbn, title, author, dateReleased);
 
   /// Create a copy of BookEntity
   /// with the given fields replaced by the non-null parameter values.
@@ -195,13 +221,16 @@ class _$BookEntityImpl implements _BookEntity {
 
 abstract class _BookEntity implements BookEntity {
   const factory _BookEntity(
-      {final String title,
+      {final String? isbn,
+      final String title,
       final AuthorEntity author,
       final DateTime? dateReleased}) = _$BookEntityImpl;
 
   factory _BookEntity.fromJson(Map<String, dynamic> json) =
       _$BookEntityImpl.fromJson;
 
+  @override
+  String? get isbn;
   @override
   String get title;
   @override

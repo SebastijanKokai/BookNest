@@ -20,8 +20,9 @@ BookDto _$BookDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BookDto {
+  String? get isbn => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
-  AuthorEntity? get author => throw _privateConstructorUsedError;
+  AuthorDto? get author => throw _privateConstructorUsedError;
   DateTime? get dateReleased => throw _privateConstructorUsedError;
 
   /// Serializes this BookDto to a JSON map.
@@ -38,9 +39,10 @@ abstract class $BookDtoCopyWith<$Res> {
   factory $BookDtoCopyWith(BookDto value, $Res Function(BookDto) then) =
       _$BookDtoCopyWithImpl<$Res, BookDto>;
   @useResult
-  $Res call({String? title, AuthorEntity? author, DateTime? dateReleased});
+  $Res call(
+      {String? isbn, String? title, AuthorDto? author, DateTime? dateReleased});
 
-  $AuthorEntityCopyWith<$Res>? get author;
+  $AuthorDtoCopyWith<$Res>? get author;
 }
 
 /// @nodoc
@@ -58,11 +60,16 @@ class _$BookDtoCopyWithImpl<$Res, $Val extends BookDto>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isbn = freezed,
     Object? title = freezed,
     Object? author = freezed,
     Object? dateReleased = freezed,
   }) {
     return _then(_value.copyWith(
+      isbn: freezed == isbn
+          ? _value.isbn
+          : isbn // ignore: cast_nullable_to_non_nullable
+              as String?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -70,7 +77,7 @@ class _$BookDtoCopyWithImpl<$Res, $Val extends BookDto>
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as AuthorEntity?,
+              as AuthorDto?,
       dateReleased: freezed == dateReleased
           ? _value.dateReleased
           : dateReleased // ignore: cast_nullable_to_non_nullable
@@ -82,12 +89,12 @@ class _$BookDtoCopyWithImpl<$Res, $Val extends BookDto>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $AuthorEntityCopyWith<$Res>? get author {
+  $AuthorDtoCopyWith<$Res>? get author {
     if (_value.author == null) {
       return null;
     }
 
-    return $AuthorEntityCopyWith<$Res>(_value.author!, (value) {
+    return $AuthorDtoCopyWith<$Res>(_value.author!, (value) {
       return _then(_value.copyWith(author: value) as $Val);
     });
   }
@@ -100,10 +107,11 @@ abstract class _$$BookDtoImplCopyWith<$Res> implements $BookDtoCopyWith<$Res> {
       __$$BookDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? title, AuthorEntity? author, DateTime? dateReleased});
+  $Res call(
+      {String? isbn, String? title, AuthorDto? author, DateTime? dateReleased});
 
   @override
-  $AuthorEntityCopyWith<$Res>? get author;
+  $AuthorDtoCopyWith<$Res>? get author;
 }
 
 /// @nodoc
@@ -119,11 +127,16 @@ class __$$BookDtoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isbn = freezed,
     Object? title = freezed,
     Object? author = freezed,
     Object? dateReleased = freezed,
   }) {
     return _then(_$BookDtoImpl(
+      isbn: freezed == isbn
+          ? _value.isbn
+          : isbn // ignore: cast_nullable_to_non_nullable
+              as String?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -131,7 +144,7 @@ class __$$BookDtoImplCopyWithImpl<$Res>
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as AuthorEntity?,
+              as AuthorDto?,
       dateReleased: freezed == dateReleased
           ? _value.dateReleased
           : dateReleased // ignore: cast_nullable_to_non_nullable
@@ -143,21 +156,23 @@ class __$$BookDtoImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$BookDtoImpl implements _BookDto {
-  const _$BookDtoImpl({this.title, this.author, this.dateReleased});
+  const _$BookDtoImpl({this.isbn, this.title, this.author, this.dateReleased});
 
   factory _$BookDtoImpl.fromJson(Map<String, dynamic> json) =>
       _$$BookDtoImplFromJson(json);
 
   @override
+  final String? isbn;
+  @override
   final String? title;
   @override
-  final AuthorEntity? author;
+  final AuthorDto? author;
   @override
   final DateTime? dateReleased;
 
   @override
   String toString() {
-    return 'BookDto(title: $title, author: $author, dateReleased: $dateReleased)';
+    return 'BookDto(isbn: $isbn, title: $title, author: $author, dateReleased: $dateReleased)';
   }
 
   @override
@@ -165,6 +180,7 @@ class _$BookDtoImpl implements _BookDto {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BookDtoImpl &&
+            (identical(other.isbn, isbn) || other.isbn == isbn) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.dateReleased, dateReleased) ||
@@ -173,7 +189,8 @@ class _$BookDtoImpl implements _BookDto {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, title, author, dateReleased);
+  int get hashCode =>
+      Object.hash(runtimeType, isbn, title, author, dateReleased);
 
   /// Create a copy of BookDto
   /// with the given fields replaced by the non-null parameter values.
@@ -193,16 +210,19 @@ class _$BookDtoImpl implements _BookDto {
 
 abstract class _BookDto implements BookDto {
   const factory _BookDto(
-      {final String? title,
-      final AuthorEntity? author,
+      {final String? isbn,
+      final String? title,
+      final AuthorDto? author,
       final DateTime? dateReleased}) = _$BookDtoImpl;
 
   factory _BookDto.fromJson(Map<String, dynamic> json) = _$BookDtoImpl.fromJson;
 
   @override
+  String? get isbn;
+  @override
   String? get title;
   @override
-  AuthorEntity? get author;
+  AuthorDto? get author;
   @override
   DateTime? get dateReleased;
 

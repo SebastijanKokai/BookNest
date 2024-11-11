@@ -7,6 +7,7 @@ part 'book_entity.g.dart';
 @freezed
 class BookEntity with _$BookEntity {
   const factory BookEntity({
+    String? isbn,
     @Default('') String title,
     @Default(AuthorEntity()) AuthorEntity author,
     DateTime? dateReleased,
