@@ -12,16 +12,14 @@ class AuthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: D.dp32),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _Logo(),
-                _AuthForm(),
-              ],
-            ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: D.dp32),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _Logo(),
+              _AuthForm(),
+            ],
           ),
         ),
       ),
