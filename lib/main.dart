@@ -1,7 +1,10 @@
 import 'package:book_nest/core/router/router.dart';
+import 'package:book_nest/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  registerDependencies();
+
   runApp(const BookNestApp());
 }
 

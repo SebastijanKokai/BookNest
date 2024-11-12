@@ -2,7 +2,10 @@ import 'package:book_nest/features/dashboard/data/repository/book_repository.dar
 import 'package:book_nest/features/dashboard/domain/entity/book/book_entity.dart';
 
 class BookUsecase {
-  final BookRepository _bookRepository = BookRepository();
+  const BookUsecase({required BookRepository bookRepository})
+      : _bookRepository = bookRepository;
+
+  final BookRepository _bookRepository;
 
   Future<List<BookEntity>> getBooks() async {
     return _bookRepository.getBooks();

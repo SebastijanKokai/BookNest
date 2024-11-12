@@ -3,7 +3,10 @@ import 'package:book_nest/features/dashboard/domain/entity/book/book_entity.dart
 import 'package:book_nest/features/dashboard/domain/extension/book_mapper.dart';
 
 class BookRepository {
-  final BookProvider _bookProvider = BookProvider();
+  const BookRepository({required BookProvider bookProvider})
+      : _bookProvider = bookProvider;
+
+  final BookProvider _bookProvider;
 
   Future<List<BookEntity>> getBooks() async {
     final books = await _bookProvider.getBooks();
