@@ -1,6 +1,5 @@
-import 'dart:convert';
-
 import 'package:book_nest/features/dashboard/data/dto/book/book_dto.dart';
+import 'package:book_nest/features/dashboard/domain/extension/book_mapper.dart';
 
 const mockedBooksJsonString = '''[
   {
@@ -50,25 +49,17 @@ class BookProvider {
     // Fake api call to simulate real backend
     await Future.delayed(const Duration(milliseconds: 500));
 
-    // @TODO (sebastijan.kokai): Use extension function to handle mapping to Dto
-    final decodedJson = jsonDecode(mockedBooksJsonString) as List<dynamic>;
-    final books = decodedJson
-        .map(
-          (item) => BookDto.fromJson(item as Map<String, dynamic>),
-        )
-        .toList();
+    const response = mockedBooksJsonString;
 
-    return books;
+    return response.toBooksDto();
   }
 
   Future<BookDto> getBook({required String isbn}) async {
     // Fake api call to simulate real backend
     await Future.delayed(const Duration(milliseconds: 300));
 
-    // @TODO (sebastijan.kokai): Use extension function to handle mapping to Dto
-    final decodedJson =
-        jsonDecode(mockedBookJsonString) as Map<String, dynamic>;
+    const response = mockedBookJsonString;
 
-    return BookDto.fromJson(decodedJson);
+    return response.toBookDto();
   }
 }
