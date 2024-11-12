@@ -46,29 +46,29 @@ mixin _$BookState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
+    required TResult Function(InitialBookState value) initial,
+    required TResult Function(LoadingBookState value) loading,
+    required TResult Function(EmptyBookState value) empty,
+    required TResult Function(ErrorBookState value) error,
+    required TResult Function(SuccessBookState value) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
+    TResult? Function(InitialBookState value)? initial,
+    TResult? Function(LoadingBookState value)? loading,
+    TResult? Function(EmptyBookState value)? empty,
+    TResult? Function(ErrorBookState value)? error,
+    TResult? Function(SuccessBookState value)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
+    TResult Function(InitialBookState value)? initial,
+    TResult Function(LoadingBookState value)? loading,
+    TResult Function(EmptyBookState value)? empty,
+    TResult Function(ErrorBookState value)? error,
+    TResult Function(SuccessBookState value)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -95,18 +95,18 @@ class _$BookStateCopyWithImpl<$Res, $Val extends BookState>
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$InitialBookStateImplCopyWith<$Res> {
+  factory _$$InitialBookStateImplCopyWith(_$InitialBookStateImpl value,
+          $Res Function(_$InitialBookStateImpl) then) =
+      __$$InitialBookStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+class __$$InitialBookStateImplCopyWithImpl<$Res>
+    extends _$BookStateCopyWithImpl<$Res, _$InitialBookStateImpl>
+    implements _$$InitialBookStateImplCopyWith<$Res> {
+  __$$InitialBookStateImplCopyWithImpl(_$InitialBookStateImpl _value,
+      $Res Function(_$InitialBookStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of BookState
@@ -115,8 +115,8 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$InitialBookStateImpl implements InitialBookState {
+  const _$InitialBookStateImpl();
 
   @override
   String toString() {
@@ -126,7 +126,7 @@ class _$InitialImpl implements _Initial {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is _$InitialBookStateImpl);
   }
 
   @override
@@ -175,11 +175,11 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
+    required TResult Function(InitialBookState value) initial,
+    required TResult Function(LoadingBookState value) loading,
+    required TResult Function(EmptyBookState value) empty,
+    required TResult Function(ErrorBookState value) error,
+    required TResult Function(SuccessBookState value) success,
   }) {
     return initial(this);
   }
@@ -187,11 +187,11 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
+    TResult? Function(InitialBookState value)? initial,
+    TResult? Function(LoadingBookState value)? loading,
+    TResult? Function(EmptyBookState value)? empty,
+    TResult? Function(ErrorBookState value)? error,
+    TResult? Function(SuccessBookState value)? success,
   }) {
     return initial?.call(this);
   }
@@ -199,11 +199,11 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
+    TResult Function(InitialBookState value)? initial,
+    TResult Function(LoadingBookState value)? loading,
+    TResult Function(EmptyBookState value)? empty,
+    TResult Function(ErrorBookState value)? error,
+    TResult Function(SuccessBookState value)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -213,23 +213,23 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements BookState {
-  const factory _Initial() = _$InitialImpl;
+abstract class InitialBookState implements BookState {
+  const factory InitialBookState() = _$InitialBookStateImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
+abstract class _$$LoadingBookStateImplCopyWith<$Res> {
+  factory _$$LoadingBookStateImplCopyWith(_$LoadingBookStateImpl value,
+          $Res Function(_$LoadingBookStateImpl) then) =
+      __$$LoadingBookStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+class __$$LoadingBookStateImplCopyWithImpl<$Res>
+    extends _$BookStateCopyWithImpl<$Res, _$LoadingBookStateImpl>
+    implements _$$LoadingBookStateImplCopyWith<$Res> {
+  __$$LoadingBookStateImplCopyWithImpl(_$LoadingBookStateImpl _value,
+      $Res Function(_$LoadingBookStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of BookState
@@ -238,8 +238,8 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
+class _$LoadingBookStateImpl implements LoadingBookState {
+  const _$LoadingBookStateImpl();
 
   @override
   String toString() {
@@ -249,7 +249,7 @@ class _$LoadingImpl implements _Loading {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+        (other.runtimeType == runtimeType && other is _$LoadingBookStateImpl);
   }
 
   @override
@@ -298,11 +298,11 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
+    required TResult Function(InitialBookState value) initial,
+    required TResult Function(LoadingBookState value) loading,
+    required TResult Function(EmptyBookState value) empty,
+    required TResult Function(ErrorBookState value) error,
+    required TResult Function(SuccessBookState value) success,
   }) {
     return loading(this);
   }
@@ -310,11 +310,11 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
+    TResult? Function(InitialBookState value)? initial,
+    TResult? Function(LoadingBookState value)? loading,
+    TResult? Function(EmptyBookState value)? empty,
+    TResult? Function(ErrorBookState value)? error,
+    TResult? Function(SuccessBookState value)? success,
   }) {
     return loading?.call(this);
   }
@@ -322,11 +322,11 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
+    TResult Function(InitialBookState value)? initial,
+    TResult Function(LoadingBookState value)? loading,
+    TResult Function(EmptyBookState value)? empty,
+    TResult Function(ErrorBookState value)? error,
+    TResult Function(SuccessBookState value)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -336,23 +336,23 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements BookState {
-  const factory _Loading() = _$LoadingImpl;
+abstract class LoadingBookState implements BookState {
+  const factory LoadingBookState() = _$LoadingBookStateImpl;
 }
 
 /// @nodoc
-abstract class _$$EmptyImplCopyWith<$Res> {
-  factory _$$EmptyImplCopyWith(
-          _$EmptyImpl value, $Res Function(_$EmptyImpl) then) =
-      __$$EmptyImplCopyWithImpl<$Res>;
+abstract class _$$EmptyBookStateImplCopyWith<$Res> {
+  factory _$$EmptyBookStateImplCopyWith(_$EmptyBookStateImpl value,
+          $Res Function(_$EmptyBookStateImpl) then) =
+      __$$EmptyBookStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$EmptyImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$EmptyImpl>
-    implements _$$EmptyImplCopyWith<$Res> {
-  __$$EmptyImplCopyWithImpl(
-      _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
+class __$$EmptyBookStateImplCopyWithImpl<$Res>
+    extends _$BookStateCopyWithImpl<$Res, _$EmptyBookStateImpl>
+    implements _$$EmptyBookStateImplCopyWith<$Res> {
+  __$$EmptyBookStateImplCopyWithImpl(
+      _$EmptyBookStateImpl _value, $Res Function(_$EmptyBookStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of BookState
@@ -361,8 +361,8 @@ class __$$EmptyImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EmptyImpl implements _Empty {
-  const _$EmptyImpl();
+class _$EmptyBookStateImpl implements EmptyBookState {
+  const _$EmptyBookStateImpl();
 
   @override
   String toString() {
@@ -372,7 +372,7 @@ class _$EmptyImpl implements _Empty {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$EmptyImpl);
+        (other.runtimeType == runtimeType && other is _$EmptyBookStateImpl);
   }
 
   @override
@@ -421,11 +421,11 @@ class _$EmptyImpl implements _Empty {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
+    required TResult Function(InitialBookState value) initial,
+    required TResult Function(LoadingBookState value) loading,
+    required TResult Function(EmptyBookState value) empty,
+    required TResult Function(ErrorBookState value) error,
+    required TResult Function(SuccessBookState value) success,
   }) {
     return empty(this);
   }
@@ -433,11 +433,11 @@ class _$EmptyImpl implements _Empty {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
+    TResult? Function(InitialBookState value)? initial,
+    TResult? Function(LoadingBookState value)? loading,
+    TResult? Function(EmptyBookState value)? empty,
+    TResult? Function(ErrorBookState value)? error,
+    TResult? Function(SuccessBookState value)? success,
   }) {
     return empty?.call(this);
   }
@@ -445,11 +445,11 @@ class _$EmptyImpl implements _Empty {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
+    TResult Function(InitialBookState value)? initial,
+    TResult Function(LoadingBookState value)? loading,
+    TResult Function(EmptyBookState value)? empty,
+    TResult Function(ErrorBookState value)? error,
+    TResult Function(SuccessBookState value)? success,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -459,25 +459,25 @@ class _$EmptyImpl implements _Empty {
   }
 }
 
-abstract class _Empty implements BookState {
-  const factory _Empty() = _$EmptyImpl;
+abstract class EmptyBookState implements BookState {
+  const factory EmptyBookState() = _$EmptyBookStateImpl;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$ErrorBookStateImplCopyWith<$Res> {
+  factory _$$ErrorBookStateImplCopyWith(_$ErrorBookStateImpl value,
+          $Res Function(_$ErrorBookStateImpl) then) =
+      __$$ErrorBookStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$ErrorImpl>
-    implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+class __$$ErrorBookStateImplCopyWithImpl<$Res>
+    extends _$BookStateCopyWithImpl<$Res, _$ErrorBookStateImpl>
+    implements _$$ErrorBookStateImplCopyWith<$Res> {
+  __$$ErrorBookStateImplCopyWithImpl(
+      _$ErrorBookStateImpl _value, $Res Function(_$ErrorBookStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of BookState
@@ -487,7 +487,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$ErrorImpl(
+    return _then(_$ErrorBookStateImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -498,8 +498,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
-  const _$ErrorImpl({required this.message});
+class _$ErrorBookStateImpl implements ErrorBookState {
+  const _$ErrorBookStateImpl({required this.message});
 
   @override
   final String message;
@@ -513,7 +513,7 @@ class _$ErrorImpl implements _Error {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorImpl &&
+            other is _$ErrorBookStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -525,8 +525,9 @@ class _$ErrorImpl implements _Error {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorBookStateImplCopyWith<_$ErrorBookStateImpl> get copyWith =>
+      __$$ErrorBookStateImplCopyWithImpl<_$ErrorBookStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -571,11 +572,11 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
+    required TResult Function(InitialBookState value) initial,
+    required TResult Function(LoadingBookState value) loading,
+    required TResult Function(EmptyBookState value) empty,
+    required TResult Function(ErrorBookState value) error,
+    required TResult Function(SuccessBookState value) success,
   }) {
     return error(this);
   }
@@ -583,11 +584,11 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
+    TResult? Function(InitialBookState value)? initial,
+    TResult? Function(LoadingBookState value)? loading,
+    TResult? Function(EmptyBookState value)? empty,
+    TResult? Function(ErrorBookState value)? error,
+    TResult? Function(SuccessBookState value)? success,
   }) {
     return error?.call(this);
   }
@@ -595,11 +596,11 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
+    TResult Function(InitialBookState value)? initial,
+    TResult Function(LoadingBookState value)? loading,
+    TResult Function(EmptyBookState value)? empty,
+    TResult Function(ErrorBookState value)? error,
+    TResult Function(SuccessBookState value)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -609,33 +610,34 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements BookState {
-  const factory _Error({required final String message}) = _$ErrorImpl;
+abstract class ErrorBookState implements BookState {
+  const factory ErrorBookState({required final String message}) =
+      _$ErrorBookStateImpl;
 
   String get message;
 
   /// Create a copy of BookState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+  _$$ErrorBookStateImplCopyWith<_$ErrorBookStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
+abstract class _$$SuccessBookStateImplCopyWith<$Res> {
+  factory _$$SuccessBookStateImplCopyWith(_$SuccessBookStateImpl value,
+          $Res Function(_$SuccessBookStateImpl) then) =
+      __$$SuccessBookStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<BookEntity> books});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+class __$$SuccessBookStateImplCopyWithImpl<$Res>
+    extends _$BookStateCopyWithImpl<$Res, _$SuccessBookStateImpl>
+    implements _$$SuccessBookStateImplCopyWith<$Res> {
+  __$$SuccessBookStateImplCopyWithImpl(_$SuccessBookStateImpl _value,
+      $Res Function(_$SuccessBookStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of BookState
@@ -645,7 +647,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
   $Res call({
     Object? books = null,
   }) {
-    return _then(_$SuccessImpl(
+    return _then(_$SuccessBookStateImpl(
       books: null == books
           ? _value._books
           : books // ignore: cast_nullable_to_non_nullable
@@ -656,8 +658,9 @@ class __$$SuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl({required final List<BookEntity> books}) : _books = books;
+class _$SuccessBookStateImpl implements SuccessBookState {
+  const _$SuccessBookStateImpl({required final List<BookEntity> books})
+      : _books = books;
 
   final List<BookEntity> _books;
   @override
@@ -676,7 +679,7 @@ class _$SuccessImpl implements _Success {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
+            other is _$SuccessBookStateImpl &&
             const DeepCollectionEquality().equals(other._books, _books));
   }
 
@@ -689,8 +692,9 @@ class _$SuccessImpl implements _Success {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+  _$$SuccessBookStateImplCopyWith<_$SuccessBookStateImpl> get copyWith =>
+      __$$SuccessBookStateImplCopyWithImpl<_$SuccessBookStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -735,11 +739,11 @@ class _$SuccessImpl implements _Success {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Empty value) empty,
-    required TResult Function(_Error value) error,
-    required TResult Function(_Success value) success,
+    required TResult Function(InitialBookState value) initial,
+    required TResult Function(LoadingBookState value) loading,
+    required TResult Function(EmptyBookState value) empty,
+    required TResult Function(ErrorBookState value) error,
+    required TResult Function(SuccessBookState value) success,
   }) {
     return success(this);
   }
@@ -747,11 +751,11 @@ class _$SuccessImpl implements _Success {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Empty value)? empty,
-    TResult? Function(_Error value)? error,
-    TResult? Function(_Success value)? success,
+    TResult? Function(InitialBookState value)? initial,
+    TResult? Function(LoadingBookState value)? loading,
+    TResult? Function(EmptyBookState value)? empty,
+    TResult? Function(ErrorBookState value)? error,
+    TResult? Function(SuccessBookState value)? success,
   }) {
     return success?.call(this);
   }
@@ -759,11 +763,11 @@ class _$SuccessImpl implements _Success {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Empty value)? empty,
-    TResult Function(_Error value)? error,
-    TResult Function(_Success value)? success,
+    TResult Function(InitialBookState value)? initial,
+    TResult Function(LoadingBookState value)? loading,
+    TResult Function(EmptyBookState value)? empty,
+    TResult Function(ErrorBookState value)? error,
+    TResult Function(SuccessBookState value)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -773,15 +777,15 @@ class _$SuccessImpl implements _Success {
   }
 }
 
-abstract class _Success implements BookState {
-  const factory _Success({required final List<BookEntity> books}) =
-      _$SuccessImpl;
+abstract class SuccessBookState implements BookState {
+  const factory SuccessBookState({required final List<BookEntity> books}) =
+      _$SuccessBookStateImpl;
 
   List<BookEntity> get books;
 
   /// Create a copy of BookState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+  _$$SuccessBookStateImplCopyWith<_$SuccessBookStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
