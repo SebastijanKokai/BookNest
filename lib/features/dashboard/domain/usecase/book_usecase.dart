@@ -8,7 +8,11 @@ class BookUsecase {
   final BookRepository _bookRepository;
 
   Future<List<BookEntity>> getBooks() async {
-    return _bookRepository.getBooks();
+    try {
+      return _bookRepository.getBooks();
+    } catch (e) {
+      throw Exception('Bookusecase => $e');
+    }
   }
 
   Future<BookEntity> getBook({required String isbn}) async {

@@ -9,9 +9,13 @@ class BookRepository {
   final BookProvider _bookProvider;
 
   Future<List<BookEntity>> getBooks() async {
-    final books = await _bookProvider.getBooks();
+    try {
+      final books = await _bookProvider.getBooks();
 
-    return books.toEntity();
+      return books.toEntity();
+    } catch (e) {
+      throw Exception('BookRepository => $e');
+    }
   }
 
   Future<BookEntity> getBook({required String isbn}) async {

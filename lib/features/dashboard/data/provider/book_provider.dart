@@ -46,12 +46,16 @@ const mockedBookJsonString = '''
 
 class BookProvider {
   Future<List<BookDto>> getBooks() async {
-    // Fake api call to simulate real backend
-    await Future.delayed(const Duration(milliseconds: 500));
+    try {
+      // Fake api call to simulate real backend
+      await Future.delayed(const Duration(milliseconds: 500));
 
-    const response = mockedBooksJsonString;
+      const response = mockedBooksJsonString;
 
-    return response.toBooksDto();
+      return response.toBooksDto();
+    } catch (e) {
+      throw Exception('BookProvider => $e');
+    }
   }
 
   Future<BookDto> getBook({required String isbn}) async {
