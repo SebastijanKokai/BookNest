@@ -1,6 +1,7 @@
 import 'package:book_nest/core/utils/service_locator.dart';
 import 'package:book_nest/core/widget/app_back_arrow_button.dart';
 import 'package:book_nest/features/books/presentation/bloc/book_details/book_details_cubit.dart';
+import 'package:book_nest/features/books/presentation/bloc/book_details/book_details_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,8 +28,11 @@ class BookDetailsPage extends StatelessWidget {
 class _BookDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Book details page'),
-    );
+    return BlocBuilder<BookDetailsCubit, BookDetailsState>(
+        builder: (context, state) {
+      return const Center(
+        child: Text('hello world'),
+      );
+    });
   }
 }
