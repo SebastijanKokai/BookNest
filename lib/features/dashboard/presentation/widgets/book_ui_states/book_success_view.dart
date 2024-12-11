@@ -1,3 +1,4 @@
+import 'package:book_nest/core/utils/sizes.dart';
 import 'package:book_nest/features/dashboard/domain/entity/book/book_entity.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class BookSuccessView extends StatelessWidget {
         children: [
           for (final book in books)
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(D.dp8),
               child: _BookCard(book),
             )
         ],
@@ -33,7 +34,7 @@ class _BookCard extends StatelessWidget {
       height: 50,
       width: double.infinity,
       decoration: const BoxDecoration(
-        color: Colors.green,
+        color: Colors.blueGrey,
       ),
       child: Column(
         children: [

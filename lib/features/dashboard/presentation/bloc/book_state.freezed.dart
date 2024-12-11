@@ -19,7 +19,7 @@ mixin _$BookState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(List<BookEntity> books) loading,
     required TResult Function() empty,
     required TResult Function(String message) error,
     required TResult Function(List<BookEntity> books) success,
@@ -28,7 +28,7 @@ mixin _$BookState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(List<BookEntity> books)? loading,
     TResult? Function()? empty,
     TResult? Function(String message)? error,
     TResult? Function(List<BookEntity> books)? success,
@@ -37,7 +37,7 @@ mixin _$BookState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(List<BookEntity> books)? loading,
     TResult Function()? empty,
     TResult Function(String message)? error,
     TResult Function(List<BookEntity> books)? success,
@@ -136,7 +136,7 @@ class _$InitialBookStateImpl implements InitialBookState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(List<BookEntity> books) loading,
     required TResult Function() empty,
     required TResult Function(String message) error,
     required TResult Function(List<BookEntity> books) success,
@@ -148,7 +148,7 @@ class _$InitialBookStateImpl implements InitialBookState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(List<BookEntity> books)? loading,
     TResult? Function()? empty,
     TResult? Function(String message)? error,
     TResult? Function(List<BookEntity> books)? success,
@@ -160,7 +160,7 @@ class _$InitialBookStateImpl implements InitialBookState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(List<BookEntity> books)? loading,
     TResult Function()? empty,
     TResult Function(String message)? error,
     TResult Function(List<BookEntity> books)? success,
@@ -222,6 +222,8 @@ abstract class _$$LoadingBookStateImplCopyWith<$Res> {
   factory _$$LoadingBookStateImplCopyWith(_$LoadingBookStateImpl value,
           $Res Function(_$LoadingBookStateImpl) then) =
       __$$LoadingBookStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<BookEntity> books});
 }
 
 /// @nodoc
@@ -234,63 +236,96 @@ class __$$LoadingBookStateImplCopyWithImpl<$Res>
 
   /// Create a copy of BookState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? books = null,
+  }) {
+    return _then(_$LoadingBookStateImpl(
+      books: null == books
+          ? _value._books
+          : books // ignore: cast_nullable_to_non_nullable
+              as List<BookEntity>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$LoadingBookStateImpl implements LoadingBookState {
-  const _$LoadingBookStateImpl();
+  const _$LoadingBookStateImpl({required final List<BookEntity> books})
+      : _books = books;
+
+  final List<BookEntity> _books;
+  @override
+  List<BookEntity> get books {
+    if (_books is EqualUnmodifiableListView) return _books;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_books);
+  }
 
   @override
   String toString() {
-    return 'BookState.loading()';
+    return 'BookState.loading(books: $books)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingBookStateImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingBookStateImpl &&
+            const DeepCollectionEquality().equals(other._books, _books));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_books));
+
+  /// Create a copy of BookState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadingBookStateImplCopyWith<_$LoadingBookStateImpl> get copyWith =>
+      __$$LoadingBookStateImplCopyWithImpl<_$LoadingBookStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(List<BookEntity> books) loading,
     required TResult Function() empty,
     required TResult Function(String message) error,
     required TResult Function(List<BookEntity> books) success,
   }) {
-    return loading();
+    return loading(books);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(List<BookEntity> books)? loading,
     TResult? Function()? empty,
     TResult? Function(String message)? error,
     TResult? Function(List<BookEntity> books)? success,
   }) {
-    return loading?.call();
+    return loading?.call(books);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(List<BookEntity> books)? loading,
     TResult Function()? empty,
     TResult Function(String message)? error,
     TResult Function(List<BookEntity> books)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
-      return loading();
+      return loading(books);
     }
     return orElse();
   }
@@ -337,7 +372,16 @@ class _$LoadingBookStateImpl implements LoadingBookState {
 }
 
 abstract class LoadingBookState implements BookState {
-  const factory LoadingBookState() = _$LoadingBookStateImpl;
+  const factory LoadingBookState({required final List<BookEntity> books}) =
+      _$LoadingBookStateImpl;
+
+  List<BookEntity> get books;
+
+  /// Create a copy of BookState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoadingBookStateImplCopyWith<_$LoadingBookStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -382,7 +426,7 @@ class _$EmptyBookStateImpl implements EmptyBookState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(List<BookEntity> books) loading,
     required TResult Function() empty,
     required TResult Function(String message) error,
     required TResult Function(List<BookEntity> books) success,
@@ -394,7 +438,7 @@ class _$EmptyBookStateImpl implements EmptyBookState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(List<BookEntity> books)? loading,
     TResult? Function()? empty,
     TResult? Function(String message)? error,
     TResult? Function(List<BookEntity> books)? success,
@@ -406,7 +450,7 @@ class _$EmptyBookStateImpl implements EmptyBookState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(List<BookEntity> books)? loading,
     TResult Function()? empty,
     TResult Function(String message)? error,
     TResult Function(List<BookEntity> books)? success,
@@ -533,7 +577,7 @@ class _$ErrorBookStateImpl implements ErrorBookState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(List<BookEntity> books) loading,
     required TResult Function() empty,
     required TResult Function(String message) error,
     required TResult Function(List<BookEntity> books) success,
@@ -545,7 +589,7 @@ class _$ErrorBookStateImpl implements ErrorBookState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(List<BookEntity> books)? loading,
     TResult? Function()? empty,
     TResult? Function(String message)? error,
     TResult? Function(List<BookEntity> books)? success,
@@ -557,7 +601,7 @@ class _$ErrorBookStateImpl implements ErrorBookState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(List<BookEntity> books)? loading,
     TResult Function()? empty,
     TResult Function(String message)? error,
     TResult Function(List<BookEntity> books)? success,
@@ -700,7 +744,7 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
+    required TResult Function(List<BookEntity> books) loading,
     required TResult Function() empty,
     required TResult Function(String message) error,
     required TResult Function(List<BookEntity> books) success,
@@ -712,7 +756,7 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
+    TResult? Function(List<BookEntity> books)? loading,
     TResult? Function()? empty,
     TResult? Function(String message)? error,
     TResult? Function(List<BookEntity> books)? success,
@@ -724,7 +768,7 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
+    TResult Function(List<BookEntity> books)? loading,
     TResult Function()? empty,
     TResult Function(String message)? error,
     TResult Function(List<BookEntity> books)? success,

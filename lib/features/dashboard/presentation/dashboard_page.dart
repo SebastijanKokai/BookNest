@@ -7,6 +7,7 @@ import 'package:book_nest/features/dashboard/presentation/widgets/book_ui_states
 import 'package:book_nest/features/dashboard/presentation/widgets/book_ui_states/book_success_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -31,7 +32,8 @@ class DashboardView extends StatelessWidget {
         ),
         body: BlocBuilder<BookCubit, BookState>(builder: (context, state) {
           return switch (state) {
-            InitialBookState() || LoadingBookState() => const BookLoadingView(),
+            InitialBookState() => const SizedBox.shrink(),
+            LoadingBookState() => BookLoadingView(books: state.books),
             EmptyBookState() => const BookEmptyView(),
             ErrorBookState() => BookErrorView(errorMessage: state.message),
             SuccessBookState() => BookSuccessView(books: state.books),

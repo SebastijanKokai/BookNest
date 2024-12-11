@@ -11,7 +11,7 @@ class BookCubit extends Cubit<BookState> {
 
   Future<void> getBooks() async {
     try {
-      emit(const BookState.loading());
+      emit(BookState.loading(books: bookUsecase.getLoadingData()));
 
       final books = await bookUsecase.getBooks();
 
