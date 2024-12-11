@@ -23,18 +23,14 @@ class _BooksView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('Dashboard Page'),
-        ),
-        body: BlocBuilder<BookCubit, BookState>(builder: (context, state) {
-          return switch (state) {
-            InitialBookState() => const SizedBox.shrink(),
-            LoadingBookState() => BookLoadingView(books: state.books),
-            EmptyBookState() => const BookEmptyView(),
-            ErrorBookState() => BookErrorView(errorMessage: state.message),
-            SuccessBookState() => BookSuccessView(books: state.books),
-          };
-        }));
+    return BlocBuilder<BookCubit, BookState>(builder: (context, state) {
+      return switch (state) {
+        InitialBookState() => const SizedBox.shrink(),
+        LoadingBookState() => BookLoadingView(books: state.books),
+        EmptyBookState() => const BookEmptyView(),
+        ErrorBookState() => BookErrorView(errorMessage: state.message),
+        SuccessBookState() => BookSuccessView(books: state.books),
+      };
+    });
   }
 }
