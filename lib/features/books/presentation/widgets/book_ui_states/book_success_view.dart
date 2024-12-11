@@ -33,17 +33,22 @@ class _BookCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Skeleton.leaf(
       child: Container(
-        height: 50,
+        height: 75,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: Colors.blueGrey,
-        ),
-        child: Column(
-          children: [
-            Text('${book.author.firstName} ${book.author.lastName}'),
-            const Spacer(),
-            Text(book.title),
-          ],
+            color: Colors.blueGrey,
+            borderRadius: BorderRadius.all(
+              Radius.circular(D.dp8),
+            )),
+        child: Padding(
+          padding: const EdgeInsets.all(D.dp8),
+          child: Column(
+            children: [
+              Text('${book.author.firstName} ${book.author.lastName}'),
+              const Spacer(),
+              Text(book.title),
+            ],
+          ),
         ),
       ),
     );
