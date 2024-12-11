@@ -5,6 +5,8 @@ import 'package:book_nest/features/books/presentation/bloc/book_details/book_det
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../widget/book_details/book_details_barrel.dart';
+
 class BookDetailsPage extends StatelessWidget {
   const BookDetailsPage({required this.isbn, super.key});
 
@@ -30,9 +32,12 @@ class _BookDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<BookDetailsCubit, BookDetailsState>(
         builder: (context, state) {
-      return const Center(
-        child: Text('hello world'),
-      );
+      return switch (state) {
+        InitialBookDetailsState() => const SizedBox.shrink(),
+        LoadingBookDetailsState() => BookDetailsLoadingView(book: state.book),
+        ErrorBookDetailsState() => BookDetailsErrorView(message: state.message),
+        SuccessBookDetailsState() => BookDetailsSuccessView(book: state.book),
+      };
     });
   }
 }
