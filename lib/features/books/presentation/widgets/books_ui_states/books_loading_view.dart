@@ -1,5 +1,5 @@
 import 'package:book_nest/features/books/domain/entity/book/book_entity.dart';
-import 'package:book_nest/features/books/presentation/widgets/book_ui_states/book_success_view.dart';
+import 'package:book_nest/features/books/presentation/widgets/books_ui_states/books_success_view.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 

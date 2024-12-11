@@ -4,7 +4,7 @@ import 'package:book_nest/features/books/presentation/bloc/book_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'widgets/book_ui_states/book_ui_barrel.dart';
+import 'widgets/books_ui_states/books_ui_barrel.dart';
 
 class BooksPage extends StatelessWidget {
   const BooksPage({super.key});
