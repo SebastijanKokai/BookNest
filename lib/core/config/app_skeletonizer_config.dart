@@ -11,7 +11,7 @@ class AppSkeletonizerConfig extends StatelessWidget {
     return SkeletonizerConfig(
       data: SkeletonizerConfigData(
         effect: ShimmerEffect(
-          baseColor: Colors.grey.withOpacity(0.1),
+          baseColor: Colors.grey.withOpacity(0.9),
           highlightColor: Colors.grey.withOpacity(0.4),
         ),
       ),
