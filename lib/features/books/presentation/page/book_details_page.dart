@@ -1,8 +1,13 @@
+import 'package:book_nest/core/utils/service_locator.dart';
 import 'package:book_nest/core/widget/app_back_arrow_button.dart';
+import 'package:book_nest/features/books/presentation/bloc/book_details/book_details_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BookDetailsPage extends StatelessWidget {
-  const BookDetailsPage({super.key});
+  const BookDetailsPage({required this.isbn, super.key});
+
+  final String? isbn;
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +16,19 @@ class BookDetailsPage extends StatelessWidget {
         title: const Text('Book details page'),
         leading: const AppBackArrowButton(),
       ),
-      body: const Center(
-        child: Text('Book details page'),
+      body: BlocProvider(
+        create: (context) => getIt<BookDetailsCubit>()..getBook(isbn: isbn),
+        child: _BookDetailsView(),
       ),
+    );
+  }
+}
+
+class _BookDetailsView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text('Book details page'),
     );
   }
 }

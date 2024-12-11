@@ -30,7 +30,10 @@ final router = GoRouter(initialLocation: NavPaths.authPage.path, routes: [
                   path: NavPaths.bookDetailsPage.path,
                   name: NavPaths.bookDetailsPage.path,
                   builder: (context, state) {
-                    return const BookDetailsPage();
+                    final isbn = state.pathParameters['id'];
+                    return BookDetailsPage(
+                      isbn: isbn,
+                    );
                   },
                 ),
               ],

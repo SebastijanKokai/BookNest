@@ -19,8 +19,12 @@ class BookRepository {
   }
 
   Future<BookEntity> getBook({required String isbn}) async {
-    final book = await _bookProvider.getBook(isbn: isbn);
+    try {
+      final book = await _bookProvider.getBook(isbn: isbn);
 
-    return book.toEntity();
+      return book.toEntity();
+    } catch (e) {
+      throw Exception('BookRepository => $e');
+    }
   }
 }
