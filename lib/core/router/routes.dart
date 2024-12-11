@@ -1,7 +1,7 @@
 class NavPaths {
   static const authPage = NavPath('/');
-  static const dashboardPage = NavPath('/dashboard');
-  static const bookClubPage = NavPath('/book_club');
+  static const booksPage = NavPath('/books');
+  static const reminderPage = NavPath('/reminder_page');
 }
 
 class NavPath {

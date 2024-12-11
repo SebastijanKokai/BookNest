@@ -11,9 +11,14 @@ class BooksPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<BookCubit>()..getBooks(),
-      child: const _BooksView(),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Books page'),
+      ),
+      body: BlocProvider(
+        create: (context) => getIt<BookCubit>()..getBooks(),
+        child: const _BooksView(),
+      ),
     );
   }
 }

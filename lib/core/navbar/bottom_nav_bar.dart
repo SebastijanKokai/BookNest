@@ -1,16 +1,19 @@
 import 'package:book_nest/core/utils/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AppBottomNavBar extends StatelessWidget {
-  const AppBottomNavBar({super.key});
+  const AppBottomNavBar({required this.navigationShell, super.key});
+
+  final StatefulNavigationShell navigationShell;
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      currentIndex: navigationShell.currentIndex,
       selectedFontSize: D.dp12,
-      elevation: 0,
       onTap: (index) {
-        // Handle click
+        navigationShell.goBranch(index);
       },
       items: [
         getTab(

@@ -63,7 +63,7 @@ class _AuthFormState extends State<_AuthForm> {
 
   void _onLogin() {
     // @TODO (sebastijan.kokai): Add logic for handling authentication
-    context.go(NavPaths.dashboardPage.path);
+    context.go(NavPaths.booksPage.path);
   }
 
   @override
