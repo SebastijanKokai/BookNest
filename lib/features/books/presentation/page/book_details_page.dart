@@ -4,6 +4,7 @@ import 'package:book_nest/features/books/presentation/bloc/book_details/book_det
 import 'package:book_nest/features/books/presentation/bloc/book_details/book_details_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import '../widget/book_details/book_details_barrel.dart';
 
@@ -34,7 +35,9 @@ class _BookDetailsView extends StatelessWidget {
         builder: (context, state) {
       return switch (state) {
         InitialBookDetailsState() => const SizedBox.shrink(),
-        LoadingBookDetailsState() => BookDetailsLoadingView(book: state.book),
+        LoadingBookDetailsState() => Skeletonizer(
+            child: BookDetailsSuccessView(book: state.book),
+          ),
         ErrorBookDetailsState() => BookDetailsErrorView(message: state.message),
         SuccessBookDetailsState() => BookDetailsSuccessView(book: state.book),
       };

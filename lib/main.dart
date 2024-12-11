@@ -1,3 +1,4 @@
+import 'package:book_nest/core/config/app_skeletonizer_config.dart';
 import 'package:book_nest/core/router/router.dart';
 import 'package:book_nest/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
@@ -13,10 +14,12 @@ class BookNestApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routeInformationParser: router.routeInformationParser,
-      routeInformationProvider: router.routeInformationProvider,
-      routerDelegate: router.routerDelegate,
+    return AppSkeletonizerConfig(
+      child: MaterialApp.router(
+        routeInformationParser: router.routeInformationParser,
+        routeInformationProvider: router.routeInformationProvider,
+        routerDelegate: router.routerDelegate,
+      ),
     );
   }
 }
