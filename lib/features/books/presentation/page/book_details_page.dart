@@ -1,3 +1,4 @@
+import 'package:book_nest/core/widget/app_back_arrow_button.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsPage extends StatelessWidget {
@@ -5,8 +6,14 @@ class BookDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Book details page'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Book details page'),
+        leading: const AppBackArrowButton(),
+      ),
+      body: const Center(
+        child: Text('Book details page'),
+      ),
     );
   }
 }
