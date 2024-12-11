@@ -1,13 +1,10 @@
 import 'package:book_nest/core/utils/service_locator.dart';
 import 'package:book_nest/features/dashboard/presentation/bloc/book_cubit.dart';
 import 'package:book_nest/features/dashboard/presentation/bloc/book_state.dart';
-import 'package:book_nest/features/dashboard/presentation/widgets/book_ui_states/book_empty_view.dart';
-import 'package:book_nest/features/dashboard/presentation/widgets/book_ui_states/book_error_view.dart';
-import 'package:book_nest/features/dashboard/presentation/widgets/book_ui_states/book_loading_view.dart';
-import 'package:book_nest/features/dashboard/presentation/widgets/book_ui_states/book_success_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:skeletonizer/skeletonizer.dart';
+
+import 'widgets/book_ui_states/book_ui_barrel.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
