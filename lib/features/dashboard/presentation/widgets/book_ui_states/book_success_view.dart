@@ -8,8 +8,40 @@ class BookSuccessView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Books loaded'),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          for (final book in books)
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _BookCard(book),
+            )
+        ],
+      ),
+    );
+  }
+}
+
+class _BookCard extends StatelessWidget {
+  const _BookCard(this.book);
+
+  final BookEntity book;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50,
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        color: Colors.green,
+      ),
+      child: Column(
+        children: [
+          Text('${book.author.firstName} ${book.author.lastName}'),
+          const Spacer(),
+          Text(book.title),
+        ],
+      ),
     );
   }
 }
