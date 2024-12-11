@@ -1,5 +1,6 @@
 import 'package:book_nest/core/router/routes.dart';
 import 'package:book_nest/features/auth/presentation/auth_page.dart';
+import 'package:book_nest/features/books/presentation/page/book_details_page.dart';
 import 'package:book_nest/features/books/presentation/page/books_overview_page.dart';
 import 'package:book_nest/core/navbar/scaffold_with_nav_bar.dart';
 import 'package:book_nest/features/reminder/presentation/reminder_page.dart';
@@ -24,15 +25,15 @@ final router = GoRouter(initialLocation: NavPaths.authPage.path, routes: [
             GoRoute(
               path: NavPaths.booksPage.path,
               builder: (context, state) => const BooksOverviewPage(),
-              // @TODO (sebastijan.kokai): Details screen to be implemented
-              // routes: <RouteBase>[
-              //   GoRoute(
-              //     path: 'details',
-              //     builder: (context, state) {
-              //       return const DetailsScreen(book: book);
-              //     },
-              //   ),
-              // ],
+              routes: <RouteBase>[
+                GoRoute(
+                  path: NavPaths.bookDetailsPage.path,
+                  name: NavPaths.bookDetailsPage.path,
+                  builder: (context, state) {
+                    return const BookDetailsPage();
+                  },
+                ),
+              ],
             ),
           ],
         ),
