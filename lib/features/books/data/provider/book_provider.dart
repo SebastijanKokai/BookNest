@@ -1,5 +1,5 @@
-import 'package:book_nest/features/dashboard/data/dto/book/book_dto.dart';
-import 'package:book_nest/features/dashboard/domain/extension/book_mapper.dart';
+import 'package:book_nest/features/books/data/dto/book/book_dto.dart';
+import 'package:book_nest/features/books/domain/extension/book_mapper.dart';
 
 const mockedBooksJsonString = '''[
   {

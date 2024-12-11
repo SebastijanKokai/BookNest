@@ -1,7 +1,7 @@
-import 'package:book_nest/features/dashboard/data/provider/book_provider.dart';
-import 'package:book_nest/features/dashboard/data/repository/book_repository.dart';
-import 'package:book_nest/features/dashboard/domain/entity/book/book_entity.dart';
-import 'package:book_nest/features/dashboard/domain/extension/book_mapper.dart';
+import 'package:book_nest/features/books/data/provider/book_provider.dart';
+import 'package:book_nest/features/books/data/repository/book_repository.dart';
+import 'package:book_nest/features/books/domain/entity/book/book_entity.dart';
+import 'package:book_nest/features/books/domain/extension/book_mapper.dart';
 
 class BookUsecase {
   const BookUsecase({required BookRepository bookRepository})

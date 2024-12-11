@@ -1,4 +1,4 @@
-import 'package:book_nest/features/dashboard/domain/entity/author/author_entity.dart';
+import 'package:book_nest/features/books/domain/entity/author/author_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'book_entity.freezed.dart';

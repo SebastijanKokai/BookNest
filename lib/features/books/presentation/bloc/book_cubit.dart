@@ -1,5 +1,5 @@
-import 'package:book_nest/features/dashboard/domain/usecase/book_usecase.dart';
-import 'package:book_nest/features/dashboard/presentation/bloc/book_state.dart';
+import 'package:book_nest/features/books/domain/usecase/book_usecase.dart';
+import 'package:book_nest/features/books/presentation/bloc/book_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BookCubit extends Cubit<BookState> {

@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:book_nest/features/dashboard/data/dto/author/author_dto.dart';
-import 'package:book_nest/features/dashboard/data/dto/book/book_dto.dart';
-import 'package:book_nest/features/dashboard/domain/entity/author/author_entity.dart';
-import 'package:book_nest/features/dashboard/domain/entity/book/book_entity.dart';
+import 'package:book_nest/features/books/data/dto/author/author_dto.dart';
+import 'package:book_nest/features/books/data/dto/book/book_dto.dart';
+import 'package:book_nest/features/books/domain/entity/author/author_entity.dart';
+import 'package:book_nest/features/books/domain/entity/book/book_entity.dart';
 
 extension BookJsonX on String {
   List<BookDto> toBooksDto() {
