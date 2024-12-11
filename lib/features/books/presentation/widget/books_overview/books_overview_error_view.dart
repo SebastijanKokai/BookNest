@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BookErrorView extends StatelessWidget {
-  const BookErrorView({required this.errorMessage, super.key});
+class BooksOverviewErrorView extends StatelessWidget {
+  const BooksOverviewErrorView({required this.errorMessage, super.key});
 
   final String errorMessage;
 

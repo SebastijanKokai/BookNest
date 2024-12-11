@@ -3,8 +3,8 @@ import 'package:book_nest/features/books/domain/entity/book/book_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
-class BookSuccessView extends StatelessWidget {
-  const BookSuccessView({required this.books, super.key});
+class BooksOverviewSuccessView extends StatelessWidget {
+  const BooksOverviewSuccessView({required this.books, super.key});
 
   final List<BookEntity> books;
 

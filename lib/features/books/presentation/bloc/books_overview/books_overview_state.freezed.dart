@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'book_state.dart';
+part of 'books_overview_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$BookState {
+mixin _$BooksOverviewState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -46,87 +46,92 @@ mixin _$BookState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(InitialBookState value) initial,
-    required TResult Function(LoadingBookState value) loading,
-    required TResult Function(EmptyBookState value) empty,
-    required TResult Function(ErrorBookState value) error,
-    required TResult Function(SuccessBookState value) success,
+    required TResult Function(InitialBooksOverviewState value) initial,
+    required TResult Function(LoadingBooksOverviewState value) loading,
+    required TResult Function(EmptyBooksOverviewState value) empty,
+    required TResult Function(ErrorBooksOverviewState value) error,
+    required TResult Function(SuccessBooksOverviewState value) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InitialBookState value)? initial,
-    TResult? Function(LoadingBookState value)? loading,
-    TResult? Function(EmptyBookState value)? empty,
-    TResult? Function(ErrorBookState value)? error,
-    TResult? Function(SuccessBookState value)? success,
+    TResult? Function(InitialBooksOverviewState value)? initial,
+    TResult? Function(LoadingBooksOverviewState value)? loading,
+    TResult? Function(EmptyBooksOverviewState value)? empty,
+    TResult? Function(ErrorBooksOverviewState value)? error,
+    TResult? Function(SuccessBooksOverviewState value)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(InitialBookState value)? initial,
-    TResult Function(LoadingBookState value)? loading,
-    TResult Function(EmptyBookState value)? empty,
-    TResult Function(ErrorBookState value)? error,
-    TResult Function(SuccessBookState value)? success,
+    TResult Function(InitialBooksOverviewState value)? initial,
+    TResult Function(LoadingBooksOverviewState value)? loading,
+    TResult Function(EmptyBooksOverviewState value)? empty,
+    TResult Function(ErrorBooksOverviewState value)? error,
+    TResult Function(SuccessBooksOverviewState value)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BookStateCopyWith<$Res> {
-  factory $BookStateCopyWith(BookState value, $Res Function(BookState) then) =
-      _$BookStateCopyWithImpl<$Res, BookState>;
+abstract class $BooksOverviewStateCopyWith<$Res> {
+  factory $BooksOverviewStateCopyWith(
+          BooksOverviewState value, $Res Function(BooksOverviewState) then) =
+      _$BooksOverviewStateCopyWithImpl<$Res, BooksOverviewState>;
 }
 
 /// @nodoc
-class _$BookStateCopyWithImpl<$Res, $Val extends BookState>
-    implements $BookStateCopyWith<$Res> {
-  _$BookStateCopyWithImpl(this._value, this._then);
+class _$BooksOverviewStateCopyWithImpl<$Res, $Val extends BooksOverviewState>
+    implements $BooksOverviewStateCopyWith<$Res> {
+  _$BooksOverviewStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$InitialBookStateImplCopyWith<$Res> {
-  factory _$$InitialBookStateImplCopyWith(_$InitialBookStateImpl value,
-          $Res Function(_$InitialBookStateImpl) then) =
-      __$$InitialBookStateImplCopyWithImpl<$Res>;
+abstract class _$$InitialBooksOverviewStateImplCopyWith<$Res> {
+  factory _$$InitialBooksOverviewStateImplCopyWith(
+          _$InitialBooksOverviewStateImpl value,
+          $Res Function(_$InitialBooksOverviewStateImpl) then) =
+      __$$InitialBooksOverviewStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialBookStateImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$InitialBookStateImpl>
-    implements _$$InitialBookStateImplCopyWith<$Res> {
-  __$$InitialBookStateImplCopyWithImpl(_$InitialBookStateImpl _value,
-      $Res Function(_$InitialBookStateImpl) _then)
+class __$$InitialBooksOverviewStateImplCopyWithImpl<$Res>
+    extends _$BooksOverviewStateCopyWithImpl<$Res,
+        _$InitialBooksOverviewStateImpl>
+    implements _$$InitialBooksOverviewStateImplCopyWith<$Res> {
+  __$$InitialBooksOverviewStateImplCopyWithImpl(
+      _$InitialBooksOverviewStateImpl _value,
+      $Res Function(_$InitialBooksOverviewStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$InitialBookStateImpl implements InitialBookState {
-  const _$InitialBookStateImpl();
+class _$InitialBooksOverviewStateImpl implements InitialBooksOverviewState {
+  const _$InitialBooksOverviewStateImpl();
 
   @override
   String toString() {
-    return 'BookState.initial()';
+    return 'BooksOverviewState.initial()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialBookStateImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$InitialBooksOverviewStateImpl);
   }
 
   @override
@@ -175,11 +180,11 @@ class _$InitialBookStateImpl implements InitialBookState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(InitialBookState value) initial,
-    required TResult Function(LoadingBookState value) loading,
-    required TResult Function(EmptyBookState value) empty,
-    required TResult Function(ErrorBookState value) error,
-    required TResult Function(SuccessBookState value) success,
+    required TResult Function(InitialBooksOverviewState value) initial,
+    required TResult Function(LoadingBooksOverviewState value) loading,
+    required TResult Function(EmptyBooksOverviewState value) empty,
+    required TResult Function(ErrorBooksOverviewState value) error,
+    required TResult Function(SuccessBooksOverviewState value) success,
   }) {
     return initial(this);
   }
@@ -187,11 +192,11 @@ class _$InitialBookStateImpl implements InitialBookState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InitialBookState value)? initial,
-    TResult? Function(LoadingBookState value)? loading,
-    TResult? Function(EmptyBookState value)? empty,
-    TResult? Function(ErrorBookState value)? error,
-    TResult? Function(SuccessBookState value)? success,
+    TResult? Function(InitialBooksOverviewState value)? initial,
+    TResult? Function(LoadingBooksOverviewState value)? loading,
+    TResult? Function(EmptyBooksOverviewState value)? empty,
+    TResult? Function(ErrorBooksOverviewState value)? error,
+    TResult? Function(SuccessBooksOverviewState value)? success,
   }) {
     return initial?.call(this);
   }
@@ -199,11 +204,11 @@ class _$InitialBookStateImpl implements InitialBookState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(InitialBookState value)? initial,
-    TResult Function(LoadingBookState value)? loading,
-    TResult Function(EmptyBookState value)? empty,
-    TResult Function(ErrorBookState value)? error,
-    TResult Function(SuccessBookState value)? success,
+    TResult Function(InitialBooksOverviewState value)? initial,
+    TResult Function(LoadingBooksOverviewState value)? loading,
+    TResult Function(EmptyBooksOverviewState value)? empty,
+    TResult Function(ErrorBooksOverviewState value)? error,
+    TResult Function(SuccessBooksOverviewState value)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -213,35 +218,38 @@ class _$InitialBookStateImpl implements InitialBookState {
   }
 }
 
-abstract class InitialBookState implements BookState {
-  const factory InitialBookState() = _$InitialBookStateImpl;
+abstract class InitialBooksOverviewState implements BooksOverviewState {
+  const factory InitialBooksOverviewState() = _$InitialBooksOverviewStateImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingBookStateImplCopyWith<$Res> {
-  factory _$$LoadingBookStateImplCopyWith(_$LoadingBookStateImpl value,
-          $Res Function(_$LoadingBookStateImpl) then) =
-      __$$LoadingBookStateImplCopyWithImpl<$Res>;
+abstract class _$$LoadingBooksOverviewStateImplCopyWith<$Res> {
+  factory _$$LoadingBooksOverviewStateImplCopyWith(
+          _$LoadingBooksOverviewStateImpl value,
+          $Res Function(_$LoadingBooksOverviewStateImpl) then) =
+      __$$LoadingBooksOverviewStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<BookEntity> books});
 }
 
 /// @nodoc
-class __$$LoadingBookStateImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$LoadingBookStateImpl>
-    implements _$$LoadingBookStateImplCopyWith<$Res> {
-  __$$LoadingBookStateImplCopyWithImpl(_$LoadingBookStateImpl _value,
-      $Res Function(_$LoadingBookStateImpl) _then)
+class __$$LoadingBooksOverviewStateImplCopyWithImpl<$Res>
+    extends _$BooksOverviewStateCopyWithImpl<$Res,
+        _$LoadingBooksOverviewStateImpl>
+    implements _$$LoadingBooksOverviewStateImplCopyWith<$Res> {
+  __$$LoadingBooksOverviewStateImplCopyWithImpl(
+      _$LoadingBooksOverviewStateImpl _value,
+      $Res Function(_$LoadingBooksOverviewStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? books = null,
   }) {
-    return _then(_$LoadingBookStateImpl(
+    return _then(_$LoadingBooksOverviewStateImpl(
       books: null == books
           ? _value._books
           : books // ignore: cast_nullable_to_non_nullable
@@ -252,8 +260,8 @@ class __$$LoadingBookStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingBookStateImpl implements LoadingBookState {
-  const _$LoadingBookStateImpl({required final List<BookEntity> books})
+class _$LoadingBooksOverviewStateImpl implements LoadingBooksOverviewState {
+  const _$LoadingBooksOverviewStateImpl({required final List<BookEntity> books})
       : _books = books;
 
   final List<BookEntity> _books;
@@ -266,14 +274,14 @@ class _$LoadingBookStateImpl implements LoadingBookState {
 
   @override
   String toString() {
-    return 'BookState.loading(books: $books)';
+    return 'BooksOverviewState.loading(books: $books)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadingBookStateImpl &&
+            other is _$LoadingBooksOverviewStateImpl &&
             const DeepCollectionEquality().equals(other._books, _books));
   }
 
@@ -281,14 +289,14 @@ class _$LoadingBookStateImpl implements LoadingBookState {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_books));
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadingBookStateImplCopyWith<_$LoadingBookStateImpl> get copyWith =>
-      __$$LoadingBookStateImplCopyWithImpl<_$LoadingBookStateImpl>(
-          this, _$identity);
+  _$$LoadingBooksOverviewStateImplCopyWith<_$LoadingBooksOverviewStateImpl>
+      get copyWith => __$$LoadingBooksOverviewStateImplCopyWithImpl<
+          _$LoadingBooksOverviewStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -333,11 +341,11 @@ class _$LoadingBookStateImpl implements LoadingBookState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(InitialBookState value) initial,
-    required TResult Function(LoadingBookState value) loading,
-    required TResult Function(EmptyBookState value) empty,
-    required TResult Function(ErrorBookState value) error,
-    required TResult Function(SuccessBookState value) success,
+    required TResult Function(InitialBooksOverviewState value) initial,
+    required TResult Function(LoadingBooksOverviewState value) loading,
+    required TResult Function(EmptyBooksOverviewState value) empty,
+    required TResult Function(ErrorBooksOverviewState value) error,
+    required TResult Function(SuccessBooksOverviewState value) success,
   }) {
     return loading(this);
   }
@@ -345,11 +353,11 @@ class _$LoadingBookStateImpl implements LoadingBookState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InitialBookState value)? initial,
-    TResult? Function(LoadingBookState value)? loading,
-    TResult? Function(EmptyBookState value)? empty,
-    TResult? Function(ErrorBookState value)? error,
-    TResult? Function(SuccessBookState value)? success,
+    TResult? Function(InitialBooksOverviewState value)? initial,
+    TResult? Function(LoadingBooksOverviewState value)? loading,
+    TResult? Function(EmptyBooksOverviewState value)? empty,
+    TResult? Function(ErrorBooksOverviewState value)? error,
+    TResult? Function(SuccessBooksOverviewState value)? success,
   }) {
     return loading?.call(this);
   }
@@ -357,11 +365,11 @@ class _$LoadingBookStateImpl implements LoadingBookState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(InitialBookState value)? initial,
-    TResult Function(LoadingBookState value)? loading,
-    TResult Function(EmptyBookState value)? empty,
-    TResult Function(ErrorBookState value)? error,
-    TResult Function(SuccessBookState value)? success,
+    TResult Function(InitialBooksOverviewState value)? initial,
+    TResult Function(LoadingBooksOverviewState value)? loading,
+    TResult Function(EmptyBooksOverviewState value)? empty,
+    TResult Function(ErrorBooksOverviewState value)? error,
+    TResult Function(SuccessBooksOverviewState value)? success,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -371,52 +379,57 @@ class _$LoadingBookStateImpl implements LoadingBookState {
   }
 }
 
-abstract class LoadingBookState implements BookState {
-  const factory LoadingBookState({required final List<BookEntity> books}) =
-      _$LoadingBookStateImpl;
+abstract class LoadingBooksOverviewState implements BooksOverviewState {
+  const factory LoadingBooksOverviewState(
+          {required final List<BookEntity> books}) =
+      _$LoadingBooksOverviewStateImpl;
 
   List<BookEntity> get books;
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoadingBookStateImplCopyWith<_$LoadingBookStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadingBooksOverviewStateImplCopyWith<_$LoadingBooksOverviewStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$EmptyBookStateImplCopyWith<$Res> {
-  factory _$$EmptyBookStateImplCopyWith(_$EmptyBookStateImpl value,
-          $Res Function(_$EmptyBookStateImpl) then) =
-      __$$EmptyBookStateImplCopyWithImpl<$Res>;
+abstract class _$$EmptyBooksOverviewStateImplCopyWith<$Res> {
+  factory _$$EmptyBooksOverviewStateImplCopyWith(
+          _$EmptyBooksOverviewStateImpl value,
+          $Res Function(_$EmptyBooksOverviewStateImpl) then) =
+      __$$EmptyBooksOverviewStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$EmptyBookStateImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$EmptyBookStateImpl>
-    implements _$$EmptyBookStateImplCopyWith<$Res> {
-  __$$EmptyBookStateImplCopyWithImpl(
-      _$EmptyBookStateImpl _value, $Res Function(_$EmptyBookStateImpl) _then)
+class __$$EmptyBooksOverviewStateImplCopyWithImpl<$Res>
+    extends _$BooksOverviewStateCopyWithImpl<$Res,
+        _$EmptyBooksOverviewStateImpl>
+    implements _$$EmptyBooksOverviewStateImplCopyWith<$Res> {
+  __$$EmptyBooksOverviewStateImplCopyWithImpl(
+      _$EmptyBooksOverviewStateImpl _value,
+      $Res Function(_$EmptyBooksOverviewStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$EmptyBookStateImpl implements EmptyBookState {
-  const _$EmptyBookStateImpl();
+class _$EmptyBooksOverviewStateImpl implements EmptyBooksOverviewState {
+  const _$EmptyBooksOverviewStateImpl();
 
   @override
   String toString() {
-    return 'BookState.empty()';
+    return 'BooksOverviewState.empty()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$EmptyBookStateImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$EmptyBooksOverviewStateImpl);
   }
 
   @override
@@ -465,11 +478,11 @@ class _$EmptyBookStateImpl implements EmptyBookState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(InitialBookState value) initial,
-    required TResult Function(LoadingBookState value) loading,
-    required TResult Function(EmptyBookState value) empty,
-    required TResult Function(ErrorBookState value) error,
-    required TResult Function(SuccessBookState value) success,
+    required TResult Function(InitialBooksOverviewState value) initial,
+    required TResult Function(LoadingBooksOverviewState value) loading,
+    required TResult Function(EmptyBooksOverviewState value) empty,
+    required TResult Function(ErrorBooksOverviewState value) error,
+    required TResult Function(SuccessBooksOverviewState value) success,
   }) {
     return empty(this);
   }
@@ -477,11 +490,11 @@ class _$EmptyBookStateImpl implements EmptyBookState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InitialBookState value)? initial,
-    TResult? Function(LoadingBookState value)? loading,
-    TResult? Function(EmptyBookState value)? empty,
-    TResult? Function(ErrorBookState value)? error,
-    TResult? Function(SuccessBookState value)? success,
+    TResult? Function(InitialBooksOverviewState value)? initial,
+    TResult? Function(LoadingBooksOverviewState value)? loading,
+    TResult? Function(EmptyBooksOverviewState value)? empty,
+    TResult? Function(ErrorBooksOverviewState value)? error,
+    TResult? Function(SuccessBooksOverviewState value)? success,
   }) {
     return empty?.call(this);
   }
@@ -489,11 +502,11 @@ class _$EmptyBookStateImpl implements EmptyBookState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(InitialBookState value)? initial,
-    TResult Function(LoadingBookState value)? loading,
-    TResult Function(EmptyBookState value)? empty,
-    TResult Function(ErrorBookState value)? error,
-    TResult Function(SuccessBookState value)? success,
+    TResult Function(InitialBooksOverviewState value)? initial,
+    TResult Function(LoadingBooksOverviewState value)? loading,
+    TResult Function(EmptyBooksOverviewState value)? empty,
+    TResult Function(ErrorBooksOverviewState value)? error,
+    TResult Function(SuccessBooksOverviewState value)? success,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -503,35 +516,38 @@ class _$EmptyBookStateImpl implements EmptyBookState {
   }
 }
 
-abstract class EmptyBookState implements BookState {
-  const factory EmptyBookState() = _$EmptyBookStateImpl;
+abstract class EmptyBooksOverviewState implements BooksOverviewState {
+  const factory EmptyBooksOverviewState() = _$EmptyBooksOverviewStateImpl;
 }
 
 /// @nodoc
-abstract class _$$ErrorBookStateImplCopyWith<$Res> {
-  factory _$$ErrorBookStateImplCopyWith(_$ErrorBookStateImpl value,
-          $Res Function(_$ErrorBookStateImpl) then) =
-      __$$ErrorBookStateImplCopyWithImpl<$Res>;
+abstract class _$$ErrorBooksOverviewStateImplCopyWith<$Res> {
+  factory _$$ErrorBooksOverviewStateImplCopyWith(
+          _$ErrorBooksOverviewStateImpl value,
+          $Res Function(_$ErrorBooksOverviewStateImpl) then) =
+      __$$ErrorBooksOverviewStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorBookStateImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$ErrorBookStateImpl>
-    implements _$$ErrorBookStateImplCopyWith<$Res> {
-  __$$ErrorBookStateImplCopyWithImpl(
-      _$ErrorBookStateImpl _value, $Res Function(_$ErrorBookStateImpl) _then)
+class __$$ErrorBooksOverviewStateImplCopyWithImpl<$Res>
+    extends _$BooksOverviewStateCopyWithImpl<$Res,
+        _$ErrorBooksOverviewStateImpl>
+    implements _$$ErrorBooksOverviewStateImplCopyWith<$Res> {
+  __$$ErrorBooksOverviewStateImplCopyWithImpl(
+      _$ErrorBooksOverviewStateImpl _value,
+      $Res Function(_$ErrorBooksOverviewStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$ErrorBookStateImpl(
+    return _then(_$ErrorBooksOverviewStateImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -542,36 +558,36 @@ class __$$ErrorBookStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorBookStateImpl implements ErrorBookState {
-  const _$ErrorBookStateImpl({required this.message});
+class _$ErrorBooksOverviewStateImpl implements ErrorBooksOverviewState {
+  const _$ErrorBooksOverviewStateImpl({required this.message});
 
   @override
   final String message;
 
   @override
   String toString() {
-    return 'BookState.error(message: $message)';
+    return 'BooksOverviewState.error(message: $message)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorBookStateImpl &&
+            other is _$ErrorBooksOverviewStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorBookStateImplCopyWith<_$ErrorBookStateImpl> get copyWith =>
-      __$$ErrorBookStateImplCopyWithImpl<_$ErrorBookStateImpl>(
-          this, _$identity);
+  _$$ErrorBooksOverviewStateImplCopyWith<_$ErrorBooksOverviewStateImpl>
+      get copyWith => __$$ErrorBooksOverviewStateImplCopyWithImpl<
+          _$ErrorBooksOverviewStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -616,11 +632,11 @@ class _$ErrorBookStateImpl implements ErrorBookState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(InitialBookState value) initial,
-    required TResult Function(LoadingBookState value) loading,
-    required TResult Function(EmptyBookState value) empty,
-    required TResult Function(ErrorBookState value) error,
-    required TResult Function(SuccessBookState value) success,
+    required TResult Function(InitialBooksOverviewState value) initial,
+    required TResult Function(LoadingBooksOverviewState value) loading,
+    required TResult Function(EmptyBooksOverviewState value) empty,
+    required TResult Function(ErrorBooksOverviewState value) error,
+    required TResult Function(SuccessBooksOverviewState value) success,
   }) {
     return error(this);
   }
@@ -628,11 +644,11 @@ class _$ErrorBookStateImpl implements ErrorBookState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InitialBookState value)? initial,
-    TResult? Function(LoadingBookState value)? loading,
-    TResult? Function(EmptyBookState value)? empty,
-    TResult? Function(ErrorBookState value)? error,
-    TResult? Function(SuccessBookState value)? success,
+    TResult? Function(InitialBooksOverviewState value)? initial,
+    TResult? Function(LoadingBooksOverviewState value)? loading,
+    TResult? Function(EmptyBooksOverviewState value)? empty,
+    TResult? Function(ErrorBooksOverviewState value)? error,
+    TResult? Function(SuccessBooksOverviewState value)? success,
   }) {
     return error?.call(this);
   }
@@ -640,11 +656,11 @@ class _$ErrorBookStateImpl implements ErrorBookState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(InitialBookState value)? initial,
-    TResult Function(LoadingBookState value)? loading,
-    TResult Function(EmptyBookState value)? empty,
-    TResult Function(ErrorBookState value)? error,
-    TResult Function(SuccessBookState value)? success,
+    TResult Function(InitialBooksOverviewState value)? initial,
+    TResult Function(LoadingBooksOverviewState value)? loading,
+    TResult Function(EmptyBooksOverviewState value)? empty,
+    TResult Function(ErrorBooksOverviewState value)? error,
+    TResult Function(SuccessBooksOverviewState value)? success,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -654,44 +670,47 @@ class _$ErrorBookStateImpl implements ErrorBookState {
   }
 }
 
-abstract class ErrorBookState implements BookState {
-  const factory ErrorBookState({required final String message}) =
-      _$ErrorBookStateImpl;
+abstract class ErrorBooksOverviewState implements BooksOverviewState {
+  const factory ErrorBooksOverviewState({required final String message}) =
+      _$ErrorBooksOverviewStateImpl;
 
   String get message;
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorBookStateImplCopyWith<_$ErrorBookStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ErrorBooksOverviewStateImplCopyWith<_$ErrorBooksOverviewStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SuccessBookStateImplCopyWith<$Res> {
-  factory _$$SuccessBookStateImplCopyWith(_$SuccessBookStateImpl value,
-          $Res Function(_$SuccessBookStateImpl) then) =
-      __$$SuccessBookStateImplCopyWithImpl<$Res>;
+abstract class _$$SuccessBooksOverviewStateImplCopyWith<$Res> {
+  factory _$$SuccessBooksOverviewStateImplCopyWith(
+          _$SuccessBooksOverviewStateImpl value,
+          $Res Function(_$SuccessBooksOverviewStateImpl) then) =
+      __$$SuccessBooksOverviewStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<BookEntity> books});
 }
 
 /// @nodoc
-class __$$SuccessBookStateImplCopyWithImpl<$Res>
-    extends _$BookStateCopyWithImpl<$Res, _$SuccessBookStateImpl>
-    implements _$$SuccessBookStateImplCopyWith<$Res> {
-  __$$SuccessBookStateImplCopyWithImpl(_$SuccessBookStateImpl _value,
-      $Res Function(_$SuccessBookStateImpl) _then)
+class __$$SuccessBooksOverviewStateImplCopyWithImpl<$Res>
+    extends _$BooksOverviewStateCopyWithImpl<$Res,
+        _$SuccessBooksOverviewStateImpl>
+    implements _$$SuccessBooksOverviewStateImplCopyWith<$Res> {
+  __$$SuccessBooksOverviewStateImplCopyWithImpl(
+      _$SuccessBooksOverviewStateImpl _value,
+      $Res Function(_$SuccessBooksOverviewStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? books = null,
   }) {
-    return _then(_$SuccessBookStateImpl(
+    return _then(_$SuccessBooksOverviewStateImpl(
       books: null == books
           ? _value._books
           : books // ignore: cast_nullable_to_non_nullable
@@ -702,8 +721,8 @@ class __$$SuccessBookStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessBookStateImpl implements SuccessBookState {
-  const _$SuccessBookStateImpl({required final List<BookEntity> books})
+class _$SuccessBooksOverviewStateImpl implements SuccessBooksOverviewState {
+  const _$SuccessBooksOverviewStateImpl({required final List<BookEntity> books})
       : _books = books;
 
   final List<BookEntity> _books;
@@ -716,14 +735,14 @@ class _$SuccessBookStateImpl implements SuccessBookState {
 
   @override
   String toString() {
-    return 'BookState.success(books: $books)';
+    return 'BooksOverviewState.success(books: $books)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessBookStateImpl &&
+            other is _$SuccessBooksOverviewStateImpl &&
             const DeepCollectionEquality().equals(other._books, _books));
   }
 
@@ -731,14 +750,14 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_books));
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessBookStateImplCopyWith<_$SuccessBookStateImpl> get copyWith =>
-      __$$SuccessBookStateImplCopyWithImpl<_$SuccessBookStateImpl>(
-          this, _$identity);
+  _$$SuccessBooksOverviewStateImplCopyWith<_$SuccessBooksOverviewStateImpl>
+      get copyWith => __$$SuccessBooksOverviewStateImplCopyWithImpl<
+          _$SuccessBooksOverviewStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -783,11 +802,11 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(InitialBookState value) initial,
-    required TResult Function(LoadingBookState value) loading,
-    required TResult Function(EmptyBookState value) empty,
-    required TResult Function(ErrorBookState value) error,
-    required TResult Function(SuccessBookState value) success,
+    required TResult Function(InitialBooksOverviewState value) initial,
+    required TResult Function(LoadingBooksOverviewState value) loading,
+    required TResult Function(EmptyBooksOverviewState value) empty,
+    required TResult Function(ErrorBooksOverviewState value) error,
+    required TResult Function(SuccessBooksOverviewState value) success,
   }) {
     return success(this);
   }
@@ -795,11 +814,11 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InitialBookState value)? initial,
-    TResult? Function(LoadingBookState value)? loading,
-    TResult? Function(EmptyBookState value)? empty,
-    TResult? Function(ErrorBookState value)? error,
-    TResult? Function(SuccessBookState value)? success,
+    TResult? Function(InitialBooksOverviewState value)? initial,
+    TResult? Function(LoadingBooksOverviewState value)? loading,
+    TResult? Function(EmptyBooksOverviewState value)? empty,
+    TResult? Function(ErrorBooksOverviewState value)? error,
+    TResult? Function(SuccessBooksOverviewState value)? success,
   }) {
     return success?.call(this);
   }
@@ -807,11 +826,11 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(InitialBookState value)? initial,
-    TResult Function(LoadingBookState value)? loading,
-    TResult Function(EmptyBookState value)? empty,
-    TResult Function(ErrorBookState value)? error,
-    TResult Function(SuccessBookState value)? success,
+    TResult Function(InitialBooksOverviewState value)? initial,
+    TResult Function(LoadingBooksOverviewState value)? loading,
+    TResult Function(EmptyBooksOverviewState value)? empty,
+    TResult Function(ErrorBooksOverviewState value)? error,
+    TResult Function(SuccessBooksOverviewState value)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -821,15 +840,16 @@ class _$SuccessBookStateImpl implements SuccessBookState {
   }
 }
 
-abstract class SuccessBookState implements BookState {
-  const factory SuccessBookState({required final List<BookEntity> books}) =
-      _$SuccessBookStateImpl;
+abstract class SuccessBooksOverviewState implements BooksOverviewState {
+  const factory SuccessBooksOverviewState(
+          {required final List<BookEntity> books}) =
+      _$SuccessBooksOverviewStateImpl;
 
   List<BookEntity> get books;
 
-  /// Create a copy of BookState
+  /// Create a copy of BooksOverviewState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessBookStateImplCopyWith<_$SuccessBookStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SuccessBooksOverviewStateImplCopyWith<_$SuccessBooksOverviewStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
