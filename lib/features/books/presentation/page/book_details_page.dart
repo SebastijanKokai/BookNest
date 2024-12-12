@@ -34,11 +34,9 @@ class _BookDetailsView extends StatelessWidget {
         builder: (context, state) {
       return switch (state) {
         InitialBookDetailsState() => const SizedBox.shrink(),
-        LoadingBookDetailsState() =>
-          BookDetailsSuccessView(isLoading: true, book: state.book),
+        LoadingBookDetailsState() => const BookDetailsLoadingView(),
         ErrorBookDetailsState() => BookDetailsErrorView(message: state.message),
-        SuccessBookDetailsState() =>
-          BookDetailsSuccessView(isLoading: false, book: state.book),
+        SuccessBookDetailsState() => BookDetailsSuccessView(book: state.book),
       };
     });
   }

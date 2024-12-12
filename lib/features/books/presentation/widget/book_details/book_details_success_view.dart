@@ -8,43 +8,38 @@ import 'package:skeletonizer/skeletonizer.dart';
 class BookDetailsSuccessView extends StatelessWidget {
   const BookDetailsSuccessView({
     super.key,
-    required this.isLoading,
     required this.book,
   });
 
-  final bool isLoading;
   final BookEntity book;
 
   @override
   Widget build(BuildContext context) {
-    return Skeletonizer(
-      enabled: isLoading,
-      child: Padding(
-        padding: const EdgeInsets.all(D.dp16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                book.title,
-                style: const TextStyle(fontSize: D.dp24),
-              ),
+    return Padding(
+      padding: const EdgeInsets.all(D.dp16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: Text(
+              book.title,
+              style: const TextStyle(fontSize: D.dp24),
             ),
-            const Gap(D.dp24),
-            _DetailWidget(
-              detail: 'Isbn',
-              value: book.isbn ?? '',
-            ),
-            _DetailWidget(
-              detail: 'Author',
-              value: '${book.author.firstName} ${book.author.lastName}',
-            ),
-            _DetailWidget(
-              detail: 'Date released',
-              value: book.dateReleased.getDetailsBookDateFormat,
-            ),
-          ],
-        ),
+          ),
+          const Gap(D.dp24),
+          _DetailWidget(
+            detail: 'Isbn',
+            value: book.isbn ?? '',
+          ),
+          _DetailWidget(
+            detail: 'Author',
+            value: '${book.author.firstName} ${book.author.lastName}',
+          ),
+          _DetailWidget(
+            detail: 'Date released',
+            value: book.dateReleased.getDetailsBookDateFormat,
+          ),
+        ],
       ),
     );
   }
@@ -62,7 +57,7 @@ class _DetailWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(D.dp16),
+      padding: const EdgeInsets.symmetric(vertical: D.dp16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
