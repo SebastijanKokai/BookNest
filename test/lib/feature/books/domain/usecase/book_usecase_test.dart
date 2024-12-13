@@ -17,7 +17,7 @@ void main() {
     sut = BookUsecase(bookRepository: repository);
   });
 
-  group('BookUsecase getBooks', () {
+  group('getBooks', () {
     test(
         'getBooks throws wrapped exception when _bookRepository.getBooks fails',
         () async {
@@ -46,7 +46,7 @@ void main() {
     });
   });
 
-  group('BookUsecase getBook', () {
+  group('getBook', () {
     test('getBook throws wrapped exception when _bookRepository.getBook fails',
         () async {
       const isbn = '123';
