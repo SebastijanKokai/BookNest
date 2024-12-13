@@ -3,7 +3,6 @@ import 'package:book_nest/features/books/data/dto/book/book_dto.dart';
 import 'package:book_nest/features/books/data/repository/book_repository.dart';
 import 'package:book_nest/features/books/domain/entity/book/book_entity.dart';
 import 'package:book_nest/features/books/domain/extension/book_mapper.dart';
-import 'package:book_nest/features/books/domain/usecase/book_usecase.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -12,14 +11,6 @@ class MockRepository extends Mock implements BookRepository {}
 class MockBookEntity extends Mock implements BookEntity {}
 
 void main() {
-  late BookUsecase sut;
-  late MockRepository repository;
-
-  setUp(() {
-    repository = MockRepository();
-    sut = BookUsecase(bookRepository: repository);
-  });
-
   group('BookMapper Json to Dto', () {
     test('toBooksDto correctly decodes a list of books', () {
       const jsonString = '''
